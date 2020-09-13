@@ -4,6 +4,7 @@
   align-items: center;
   background-color: #131921;
   position: sticky;
+  padding: 0 14px;
   top: 0;
   z-index: 100;
 }
@@ -27,17 +28,27 @@
   padding: 10px;
   border: none;
   width: 100%;
+  border-radius: 4px 0 0 4px;
 }
 
 .header__searchIcon {
   padding: 5px;
   height: 22px !important;
-  background-color: #cd9042;
+  background-color: #febd69;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+.header__searchIcon:hover {
+  background-color: #f3a847;
 }
 
 .header__nav {
   display: flex;
   justify-content: space-evenly;
+}
+
+.header__nav a {
+  text-decoration: none;
 }
 
 .header__otionLineOne {

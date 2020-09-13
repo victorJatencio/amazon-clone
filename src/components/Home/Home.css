@@ -4,6 +4,14 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 1500px;
+  position: relative;
+}
+
+.home__container {
+  max-width: 1500px;
+  width: 100%;
+  position: relative;
+  margin: auto;
 }
 
 .home__row {
@@ -16,6 +24,98 @@
 .home__image {
   width: 100%;
   z-index: -1;
-  margin-bottom: -150px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.home__carrousel {
+  max-width: 99vw;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  margin-bottom: -150px;
+}
+.home__carrousel .slick-prev {
+  left: 7%;
+  z-index: 1;
+}
+.home__carrousel .slick-next {
+  right: 7%;
+}
+.home__carrousel .slick-prev:before,
+.home__carrousel .slick-next:before {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 40px;
+  line-height: 1;
+  opacity: 0.75;
+  color: #0f0f0f91;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.home__carrousel .slick-next:before {
+  content: ">";
+}
+.home__carrousel .slick-prev:before {
+  content: "<";
+}
+
+.home__topTrending {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  max-height: 400px;
+  min-width: 100px;
+  background-color: #fff;
+  z-index: 1;
+}
+.home__topTrending > h2 {
+  font-size: 21px;
+  color: #444;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.home__topTrending .slick-slider {
+  max-width: 1300px;
+  width: 100%;
+}
+
+.home__topTrending .slick-prev {
+  left: -2%;
+  z-index: 1;
+}
+.home__topTrending .slick-next {
+  right: -2%;
+}
+.home__topTrending .slick-prev:before,
+.home__topTrending .slick-next:before {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 40px;
+  line-height: 1;
+  opacity: 0.75;
+  color: #0f0f0f91;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.home__topTrending .slick-next:before {
+  content: ">";
+}
+.home__topTrending .slick-prev:before {
+  content: "<";
+}
+
+.home__trendingItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+.home__trendingItem > img {
+  max-width: 70%;
+  position: relative;
+  margin: auto;
+  object-fit: contain;
 }

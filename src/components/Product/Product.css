@@ -29,9 +29,19 @@
 }
 
 .product > button {
-  background: #f0c14b;
   border: 1px solid;
   margin-top: 10px;
-  border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+  background: #f4d078;
+  background: -webkit-linear-gradient(top, #f7dfa5, #f0c14b);
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  border-color: #a88734 #9c7e31 #846a29;
+  border-radius: 2px;
+  font-size: 11px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.product > button:hover {
+  background: -webkit-linear-gradient(to bottom, #f5d78e, #eeb933);
+  background: linear-gradient(to bottom, #f5d78e, #eeb933);
 }

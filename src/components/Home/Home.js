@@ -1,17 +1,77 @@
 import React from "react";
 import Product from "../Product/Product";
-
+import Footer from "../Footer/Footer";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./Home.css";
 
 function Home() {
+  let settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
+  let topTrending = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+  };
+
   return (
-    <div className="home">
+    <div id="home" className="home">
       <div className="home__container">
-        <img
-          className="home__image"
-          src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
-          alt="Home Hero"
-        />
+        <div className="home__carrousel">
+          <Slider {...settings}>
+            <div>
+              <img
+                className="home__image"
+                src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
+                alt="Home Hero"
+              />
+            </div>
+            <div>
+              <img
+                className="home__image"
+                src="https://images-na.ssl-images-amazon.com/images/G/01/kindle/journeys/YjJkZWQ0NTgt/YjJkZWQ0NTgt-NGU5NjdkODIt-w3000._CB406119060_.jpg"
+                alt="Home Hero"
+              />
+            </div>
+            <div>
+              <img
+                className="home__image"
+                src="https://images-na.ssl-images-amazon.com/images/G/01/sm/SNK/Phase_3/GW_3000x1200_SNKPhase3._CB406794620_.jpg"
+                alt="Home Hero"
+              />
+            </div>
+            <div>
+              <img
+                className="home__image"
+                src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonMusic/2020/WeeklyBuild/091120/091120_US_NewAlbum_ChristianNodal_GW_Hero_D_CVX_EG_3000x1200._CB405473300_.jpg"
+                alt="Home Hero"
+              />
+            </div>
+            <div>
+              <img
+                className="home__image"
+                src="https://images-na.ssl-images-amazon.com/images/G/01/img20/events/bts/gateway/BTS20_GW_Desktop_Hero_DigEdResources_2x_3000x600_v2._CB429427081_.jpg"
+                alt="Home Hero"
+              />
+            </div>
+            <div>
+              <img
+                className="home__image"
+                src="https://images-na.ssl-images-amazon.com/images/G/01/IMDbTV/gateway/theoutpost/GW_DHERO_TheOutpost_3000x1200_EN-US_5538_v12x._CB407273330_.jpg"
+                alt="Home Hero"
+              />
+            </div>
+          </Slider>
+        </div>
 
         <div className="home__row">
           <Product
@@ -61,6 +121,74 @@ function Home() {
             rating={5}
           />
         </div>
+        <div className="home__row">
+          <div className="home__topTrending">
+            <h2>Top trending products</h2>
+            <Slider {...topTrending}>
+              <div className="home__trendingItem">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/615AtrSnJXL._AC_SY400_.jpg"
+                  alt="other"
+                />
+              </div>
+              <div className="home__trendingItem">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/51mM8jXFVYL._AC_SY400_.jpg"
+                  alt="other"
+                />
+              </div>
+              <div className="home__trendingItem">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/61MwloPMgDL._AC_SY400_.jpg"
+                  alt="other"
+                />
+              </div>
+              <div className="home__trendingItem">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/61drB7V+RvL._AC_SY400_.jpg"
+                  alt="other"
+                />
+              </div>
+              <div className="home__trendingItem">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/61GSPGb45jL._AC_SY400_.jpg"
+                  alt="other"
+                />
+              </div>
+              <div className="home__trendingItem">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/81p41Tq2S9L._AC_SY400_.jpg"
+                  alt="other"
+                />
+              </div>
+              <div className="home__trendingItem">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/61sq8OWfUTL._AC_SY400_.jpg"
+                  alt="other"
+                />
+              </div>
+              <div className="home__trendingItem">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/91byUGzYWGL._AC_SY400_.jpg"
+                  alt="other"
+                />
+              </div>
+              <div className="home__trendingItem">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/61ErvdglFlL._AC_SY400_.jpg"
+                  alt="other"
+                />
+              </div>
+              <div className="home__trendingItem">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/714b4iaRInL._AC_SY400_.jpg"
+                  alt="other"
+                />
+              </div>
+            </Slider>
+          </div>
+        </div>
+        <Footer />
       </div>
     </div>
   );
